@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "User": {
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "avatar": { "type": "string", "maxLength": 500 },
+        "online": { "type": "boolean" },
+        "lastSeen": { "type": "string" }
+      }
+    },
+    "Chat": {
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "avatar": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "Message": {
+      "properties": {
+        "id": { "type": "string" },
+        "chatId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "senderName": { "type": "string", "maxLength": 100 },
+        "text": { "type": "string", "maxLength": 2000 },
+        "timestamp": { "type": "timestamp" }
+      }
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User"
+    },
+    "chats/{chatId}": {
+      "schema": "Chat"
+    },
+    "chats/{chatId}/messages/{messageId}": {
+      "schema": "Message"
+    }
+  }
+}

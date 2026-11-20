@@ -1,0 +1,6 @@
+{
+  "name": "Era Messenger",
+  "description": "تطبيق مراسلة فورية متطور شبيه بتليجرام مع تشفير تام، قصص، وملف شخصي متكامل",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
